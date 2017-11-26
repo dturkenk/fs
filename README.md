@@ -7,7 +7,9 @@ Abstract file mechanism for R
 
 ## Proposed API
 ```R
-fs <- vfs::FileSystem(vfs-local::local-driver)
-vfs::save(fs=fs, path="/path/to/file", data=foo)
-vfs::close(fs=fs)
+library(vfs)
+fs <- fsOpen(vfs-local::local-driver())
+fsSave(fs, path="/path/to/file", data=foo)
+bar <- fsLoad(fs=, path="/path/to/file")
+fsClose(fs=fs)
 ```
