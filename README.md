@@ -13,5 +13,5 @@ fs <- fsOpen(vfs-local::local-driver())
 # fs <- fsOpen(vfs-s3::s3-driver(), credentials_file="/path/to/aws/credentials", bucket="https://bucket.s3.amazonaws.com")
 fsSave(fs, path="/path/to/file", data=foo)
 bar <- fsLoad(fs=, path="/path/to/file")
-fsClose(fs=fs)
+fsClose(fs)
 ```
